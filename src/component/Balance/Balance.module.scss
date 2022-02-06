@@ -1,0 +1,117 @@
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__title,
+  &__input,
+  &__btn {
+    line-height: calc(14 / 12);
+    font-size: 12px;
+  }
+
+  &__title {
+    padding-bottom: 6px;
+    color: rgba(82, 85, 95, 0.7);
+    letter-spacing: 0.02em;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 21px;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 125px;
+    padding: 15px 17px 15px 23px;
+    border: 2px solid #ffffff;
+    border-right: none;
+    background-color: transparent;
+    border-radius: 22px 0px 0px 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    &::placeholder {
+      color: #000000;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 125px;
+      margin-right: 15px;
+      padding: 12px 20px;
+      border-right: 2px solid #ffffff;
+      border-radius: 16px;
+    }
+  }
+
+  &__activebtn {
+    padding-left: 0;
+    padding-right: 0;
+    width: 125px;
+    color: rgba(82, 85, 95, 0.7);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    border: 2px solid #ffffff;
+    border-radius: 0px 22px 22px 0px;
+    background: transparent;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      background-color: #ff751d;
+      color: #ffffff;
+    }
+
+    @media screen and (min-width: 768px) {
+      border-radius: 16px;
+    }
+  }
+
+  &__disabledbtn {
+    padding-left: 0;
+    padding-right: 0;
+    width: 125px;
+    color: rgba(82, 85, 95, 0.7);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 12px 17px;
+    border: 2px solid #ffffff;
+    border-radius: 0px 22px 22px 0px;
+    background: transparent;
+    cursor: default;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      padding: 12px 14px;
+      border-radius: 16px;
+    }
+  }
+}
+
+.darkTheme {
+  .balance__title {
+    color: #f0e7e7;
+  }
+  .balance__input {
+    color: #f0e7e7;
+
+    &::placeholder {
+      color: #f0e7e7;
+    }
+  }
+
+  .balance__activebtn {
+    color: #f0e7e7;
+  }
+}

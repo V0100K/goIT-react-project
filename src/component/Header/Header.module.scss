@@ -1,0 +1,117 @@
+.header {
+  padding: 12px 0;
+  background-color: white;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  fill: #000000;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background: #f5f6fa;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+}
+
+.avatarText {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+
+  color: #52555f;
+}
+
+.userName {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+
+  color: #52555f;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 36px;
+    border-right: 1px solid #e0e5eb;
+  }
+}
+
+.logoutIcon {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.logoutText {
+  text-decoration-line: underline;
+
+  @media screen and (min-width: 320px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.btn {
+  height: 16px;
+  background: white;
+}
+
+.lightTheme {
+  transition: all ease-in-out 1200ms;
+  background-color: white;
+}
+
+.darkTheme {
+  transition: all ease-in-out 1200ms;
+  background-color: #252529;
+
+  .logo {
+    fill: #757781;
+  }
+
+  .btn {
+    background: #252529;
+  }
+
+  .logoutText {
+    color: #f0e7e7;
+  }
+
+  .userName {
+    color: #f0e7e7;
+  }
+}

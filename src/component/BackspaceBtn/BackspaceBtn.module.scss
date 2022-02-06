@@ -1,0 +1,76 @@
+// .btnBackspace_wrap {
+//   //   display: flex;
+//   //   align-items: center;
+//   //   justify-content: center;
+// }
+.btn_backspace {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    .text {
+      color: #ff751d;
+    }
+  }
+
+  background-color: inherit;
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
+  @media screen and (min-width: 1280px) {
+    position: static;
+  }
+}
+.img {
+  width: 24px;
+  height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    /* identical to box height */
+    margin-left: 18px;
+    letter-spacing: 0.04em;
+
+    color: rgba(82, 85, 95, 0.7);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hidden_text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.darkTheme {
+  .text {
+    color: #f0e7e7;
+  }
+
+  .btn_backspace {
+    &:hover,
+    &:focus {
+      .text {
+        color: #ff751d;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+.reportInfo_section {
+  transition: all ease-in-out 1200ms;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: url("../../images/svg/bground/bcgImage.svg");
+    width: 90px;
+    height: 232px;
+    bottom: 28px;
+    left: 85%;
+
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 768px) {
+      width: 1240px;
+      height: 232px;
+      bottom: 28px;
+      left: 2%;
+    }
+  }
+}
+.report_head_wrap {
+  transition: all ease-in-out 1200ms;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    width: calc(100vw - 100px);
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1280px) {
+    width: calc(100vw - 220px);
+    // flex-direction: row-reverse;
+  }
+}
+// =========================
+.reportBalance_wrap {
+  transition: all ease-in-out 1200ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 500;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.17;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    // margin-right: 21px;
+  }
+  @media screen and (min-width: 1280px) {
+    // margin-right: 21px;
+  }
+}
+.balanceText {
+  transition: all ease-in-out 1200ms;
+  color: rgba(82, 85, 95, 0.7);
+  @media screen and (min-width: 768px) {
+    // flex-direction: row;
+    margin-right: 21px;
+  }
+  // @media screen and (min-width: 1280px) {
+  //   margin-right: 21px;
+  // }
+}
+.balanceNumber {
+  transition: all ease-in-out 1200ms;
+  margin-top: 6px;
+  padding: 15px 30px;
+  background-color: inherit;
+  border: 2px solid #ffffff;
+  border-radius: 22px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+// ===========================   Categories
+.section_categories {
+  transition: all ease-in-out 1200ms;
+  max-width: calc(100% - 38px);
+  margin: 0 auto;
+  // padding-top: 57px;
+  // @media screen and (min-width: 768px) {
+  // background-color: #ffffff;
+  // border-radius: 30px;
+  // box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+  // }
+  // @media screen and (min-width: 1280px) {
+  //   // margin-right: 21px;
+  // }
+}
+
+.report_switch_wrap {
+  transition: all ease-in-out 1200ms;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: calc(100vw - 100px);
+    margin-bottom: 21px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+  }
+  @media screen and (min-width: 1280px) {
+    width: calc(100vw - 220px);
+    margin-bottom: 30px;
+  }
+}
+// ========================  GRAPH DEPENDENCY
+.graph_dependency_wrap {
+  transition: all ease-in-out 1200ms;
+  // transform: rotate(90deg);
+  // margin-top: 30px;
+  margin-bottom: 70px;
+  margin: 0 auto;
+  // max-height: 500px;
+  max-width: calc(100vw - 38px);
+  // display: flex;
+  @media screen and (min-width: 768px) {
+    // transform: rotate(0deg);
+    // max-width: 666px;
+    max-width: calc(100vw - 102px);
+
+    max-height: 422px;
+    // max-width: 422px;
+    // max-height: 666px;
+
+    background: #ffffff;
+    /* shadow 1 */
+
+    box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+    border-radius: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    // max-width: 1060px;
+    // max-height: 1060px;
+    max-width: calc(100vw - 220px);
+    // width: 1060px;
+    height: 422px;
+  }
+}
+
+.darkTheme {
+  transition: all ease-in-out 1200ms;
+  background-color: #1f2022;
+
+  .balanceText {
+    color: #f0e7e7;
+  }
+
+  .balanceNumber {
+    background-color: #757781;
+    color: #f0e7e7;
+  }
+
+  .report_switch_wrap {
+    background-color: #757781;
+  }
+  .graph_dependency_wrap {
+    background-color: #757781;
+    color: #f0e7e7;
+  }
+}

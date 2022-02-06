@@ -1,0 +1,162 @@
+.label {
+  position: relative;
+
+  .calc {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+  }
+}
+
+.input_box {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    margin-right: 27px;
+  }
+}
+
+.input,
+.select,
+.number {
+  border: 2px solid #f5f6fb;
+  color: #52555f;
+  text-align: center;
+  height: 44px;
+}
+
+.input {
+  width: 192px;
+  border-right: none;
+
+  @media screen and (min-width: 1280px) {
+    width: 289px;
+    text-align: left;
+    padding-left: 21px;
+    padding-right: 10px;
+  }
+}
+
+.select {
+  width: 171px;
+  color: #c7ccdc;
+
+  @media screen and (min-width: 1280px) {
+    width: 181px;
+  }
+}
+
+.number {
+  width: 104px;
+  border-left: none;
+  border-radius: 0 16px 16px 0;
+  padding-right: 27px;
+
+  @media screen and (min-width: 1280px) {
+    width: 124px;
+  }
+}
+
+.input::placeholder {
+  color: #c7ccdc;
+}
+
+@media screen and (min-width: 480px) {
+  .form {
+    flex-wrap: wrap;
+  }
+
+  .form_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 604px;
+  }
+
+  .left_input {
+    border-radius: 16px 0px 0px 0px;
+  }
+  .wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .form {
+    justify-content: normal;
+  }
+
+  .wrap {
+    margin-top: 0px;
+  }
+}
+
+.btn {
+  margin-top: 0;
+  margin-right: 15px;
+  background-color: #ffff;
+  border: 2px solid #f5f6fb;
+  color: #52555f;
+}
+.btnClean {
+  margin-top: 0;
+  background-color: #ffff;
+  border: 2px solid #f5f6fb;
+  color: #52555f;
+}
+.btnClean:hover {
+  background-color: #ff751d;
+}
+
+.darkTheme {
+  transition: all ease-in-out 1200ms;
+  .input,
+  .select,
+  .number {
+    background-color: #757781;
+    color: #f0e7e7;
+  }
+
+  .input,
+  .number {
+    &::placeholder {
+      color: #f0e7e7;
+    }
+  }
+}
+.animation {
+  animation-name: actives;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+  @keyframes actives {
+    0% {
+      background-color: ffff;
+      transform: scale(0.98);
+    }
+
+    50% {
+      background-color: #ff751d;
+      transform: scale(1);
+    }
+
+    100% {
+      background-color: deepskyblue;
+      transform: scale(1.01);
+    }
+  }
+}

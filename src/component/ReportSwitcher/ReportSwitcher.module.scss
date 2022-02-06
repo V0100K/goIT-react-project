@@ -1,0 +1,43 @@
+.cost_incomes_wrap {
+  margin: 0 auto;
+  display: flex;
+  max-width: 134px;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
+  .btn {
+    background-color: inherit;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+  }
+  .btn:hover {
+    background-color: rgb(148, 231, 3);
+    transition: all ease-in-out 400ms;
+  }
+}
+
+.cost_incomes {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  margin: 0 10px;
+}
+.arrows {
+  // width: 8px;
+  height: 10px;
+}
+
+.darkTheme {
+  .cost_incomes {
+    color: #f0e7e7;
+  }
+}

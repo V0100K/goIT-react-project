@@ -1,0 +1,29 @@
+.ButtonWrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.ButtonGoogleAuth {
+  width: 122px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+  box-shadow: 1px 2px 3px rgba(170, 178, 197, 0.2);
+  border-radius: 26px;
+  background-color: #f6f7fb;
+  cursor: pointer;
+  border: none;
+
+  transition: background 250ms linear, box-shadow 250ms linear;
+}
+.ButtonGoogleAuth:hover,
+.ButtonGoogleAuth:focus {
+  background-color: #ff751d;
+
+  transition: background 250ms linear, box-shadow 250ms linear;
+}

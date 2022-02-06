@@ -1,0 +1,117 @@
+.img {
+  width: 56px;
+  height: 56px;
+  margin: 5px 0;
+}
+.rectangle_icon {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  width: 59px;
+  height: 46px;
+  background-color: #f5f6fb;
+  border-radius: 20px;
+  z-index: -1;
+  transform: translate(-52%);
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  grid-gap: 40px 15px;
+  margin: 0 auto;
+  padding-bottom: 23px;
+  max-width: 282px;
+  margin-top: 20px;
+  margin-bottom: 54px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background-image: repeating-linear-gradient(
+    to top,
+    #e0e5eb 0px 1px,
+    transparent 1px 147px
+  );
+  @media screen and (min-width: 768px) {
+    background-image: none;
+    margin: 20px 21px 30px 31px;
+    max-width: 613px;
+  }
+  // @media screen and (min-width: 1280px) {
+  //   // margin-right: 21px;
+  // }
+}
+.item {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  flex-basis: calc(100% / 3 - 15px);
+  flex-direction: column;
+  align-items: center;
+  transition: all ease-in-out 400ms;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 6 - 15px);
+  }
+}
+.item:hover,
+.item:focus .img {
+  transform: scale(1.02);
+  fill: #ff751d;
+  transition: fill ease-in-out 400ms;
+  .rectangle_icon {
+    background-color: #ffdac0;
+    transition: background-color ease-in-out 400ms;
+  }
+}
+
+.link {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.darkTheme {
+  .item {
+    color: #f0e7e7;
+  }
+}
+.active {
+  .img {
+    transform: scale(1.02);
+    fill: #ff751d;
+    transition: fill ease-in-out 400ms;
+
+    animation-name: actives;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+    @keyframes actives {
+      0% {
+        // background-color: teal;
+        transform: rotate(-15deg);
+      }
+
+      50% {
+        // background-color: orange;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        // background-color: deepskyblue;
+        transform: rotate(15deg);
+      }
+    }
+  }
+  .rectangle_icon {
+    background-color: #ffdac0;
+    transition: background-color ease-in-out 400ms;
+  }
+}

@@ -1,0 +1,262 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Roboto";
+  font-style: 400;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.04em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* 320px mobile */
+@media screen and (min-width: 320px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 19px;
+
+    min-width: 320px;
+    max-width: 480px;
+  }
+}
+
+/* 768px tablet */
+@media screen and (min-width: 768px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 26px;
+
+    min-width: 768px;
+  }
+}
+
+/* 768px tablet */
+@media screen and (min-width: 1280px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 26px;
+
+    min-width: 1280px;
+  }
+}
+
+.background {
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 526px;
+  width: 100%;
+  background-color: #f5f6fb;
+  border-radius: 0 0 0 105px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  .background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 257px;
+    width: 100%;
+    background-color: #f5f6fb;
+    border-radius: 0 0 0 125px;
+    z-index: -1;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* .react-calendar-style {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+} */
+
+.react-calendar {
+  position: absolute;
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.react-calendar__tile--active {
+  background: #ff751d;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffd6a0;
+}
+
+.react-calendar__tile--now {
+  background: #ffd6a0;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #ff751d;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .react-calendar {
+    width: 300px;
+    top: 245px;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .react-calendar {
+    width: 300px;
+
+    top: 85px;
+    left: 30%;
+    transform: translate(-50%, 0%) scale(1);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .react-calendar {
+    width: 300px;
+
+    top: 85px;
+    left: 30px;
+  }
+}
+
+.error {
+  position: relative;
+}
+
+.error::before {
+  content: "*";
+
+  position: absolute;
+  top: 0;
+  left: -7px;
+
+  color: #eb5757;
+}
+
+.error::after {
+  content: "это обязательное поле";
+  width: 150px;
+
+  position: absolute;
+  bottom: -81px;
+  left: -6px;
+
+  color: #eb5757;
+}

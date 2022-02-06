@@ -1,0 +1,64 @@
+.calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+.calendarImg {
+  margin-right: 10px;
+
+  cursor: pointer;
+
+  &:hover {
+    // fill: red;
+  }
+}
+.calendarDate {
+  height: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  color: #52555f;
+  @media screen and (min-width: 768px) {
+    width: 74px;
+    margin-right: 10px;
+  }
+}
+
+div div.react-calendar.react-calendar-style {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+}
+
+.react-calendar {
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+}
+
+.darkTheme {
+  .calendarDate {
+    color: #f0e7e7;
+  }
+}
+
+.backdrop {
+  position: fixed;
+
+  width: 1000vw;
+  height: 1000vh;
+}

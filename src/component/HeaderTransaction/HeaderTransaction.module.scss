@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  display: flex;
+  justify-content: left;
+}
+.link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  width: 138px;
+  height: 40px;
+  background: #fafbfd;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.active {
+  color: #ff751d;
+}
+
+.darkTheme {
+  transition: all ease-in-out 1200ms;
+  .link {
+    background: #252529;
+    color: #f0e7e7;
+  }
+  .active {
+    color: #ff751d;
+  }
+}

@@ -1,0 +1,42 @@
+// .svg {
+//   overflow: visible;
+//   display: block;
+//   /* background: #eee; */
+//   width: 100%;
+//   height: inherit;
+//   // widows: inherit;
+//   //   height: calc(100vh - 1000px);
+//   //   height: auto;
+
+//   // max-width: calc(100vw - 38px);
+//   // height: auto;
+//   // @media screen and (min-width: 768px) {
+//   //   max-width: calc(100vw - 102px);
+//   // }
+//   // @media screen and (min-width: 768px) {
+//   //   max-width: calc(100vw - 220px);
+//   // }
+// }
+
+// .bar {
+//   //   padding: 15px 0;
+//   //   background-color: blue;
+//   border-end-end-radius: 15px;
+//   overflow: hidden;
+// }
+.bar_wrap {
+  max-width: 282px;
+  // height: 800px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 635px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 758px;
+  }
+}
+// .observer {
+//   // display: flex;
+//   // width: auto;
+//   // max-width: 282px;
+// }

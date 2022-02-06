@@ -1,0 +1,167 @@
+.homepage {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  &__report {
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.04em;
+    color: rgba(82, 85, 95, 0.7);
+  }
+
+  &__logo {
+    margin-left: 15px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__toppart {
+    margin-bottom: 60px;
+  }
+
+  &__btnwrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 282px;
+  }
+
+  &__btn {
+    padding: 19px 0;
+    display: block;
+    width: 140px;
+    height: 53px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    background: #f5f6fb;
+
+    &:hover,
+    &:focus {
+      background-color: #ff751d;
+      color: #ffffff;
+    }
+  }
+}
+
+.transactions {
+  margin: 0 auto;
+  width: 280px;
+  height: 153px;
+
+  overflow: scroll;
+
+  &__list {
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    height: 30px;
+    margin-bottom: 21px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      background: #f5f6fb;
+      width: 280px;
+      height: 1px;
+    }
+  }
+
+  &__leftpart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50px;
+    margin-right: 20px;
+
+    overflow: visible;
+
+    color: #52555f;
+  }
+
+  &__description {
+    width: 50px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.04em;
+  }
+
+  &__date {
+    width: 50px;
+
+    font-size: 8px;
+    line-height: calc(9 / 8);
+    letter-spacing: 0.04em;
+  }
+
+  &__category {
+    margin-top: auto;
+    margin-right: 10px;
+    min-width: 75px;
+    max-width: 75px;
+
+    font-size: 8px;
+    line-height: calc(9 / 8);
+    letter-spacing: 0.04em;
+  }
+
+  &__rightpart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+
+    overflow: visible;
+  }
+
+  &__amount {
+    margin-right: 20px;
+    width: 90px;
+
+    text-align: end;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.04em;
+  }
+}
+
+.darkTheme {
+  transition: all ease-in-out 1200ms;
+  .homepage__report {
+    color: #f0e7e7;
+  }
+
+  .transactions__item {
+    color: #f0e7e7;
+  }
+
+  .transactions__leftpart {
+    color: #f0e7e7;
+  }
+}

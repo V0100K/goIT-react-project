@@ -1,6 +1,5 @@
 {
   "name": "smart-finance-team-work",
-  "homepage": "https://V0100K.github.io/goIT-react-project",
 
   "version": "0.1.0",
   "description": "",
@@ -34,7 +33,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "netlify deploy -p",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
